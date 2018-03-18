@@ -1,0 +1,26 @@
+{
+  "name": "apollo-netlify-graphcool-sample",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.3",
+    "graphql": "^0.13.2",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:staging": "env-cmd .env.staging react-scripts start",
+    "start:production": "env-cmd .env.production react-scripts start",
+    "build": "react-scripts build",
+    "deploy:staging": "env-cmd .env.staging npm run build && netlify deploy -p build -s <your-netlify-staging-app-id>",
+    "deploy:production": "env-cmd .env.production npm run build && netlify deploy -p build -s <your-netlify-production-app-id>",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "env-cmd": "^7.0.0"
+  }
+}
