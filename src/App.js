@@ -34,8 +34,12 @@ class App extends Component {
 
 export default compose(
   graphql(gql`
-    query {
-       posts: allPosts {id title description}
-    }
+    query{
+  posts{
+    id
+    title
+    description
+  }
+}
   `),
 )(App);
