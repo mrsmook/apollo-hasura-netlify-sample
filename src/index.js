@@ -11,10 +11,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: process.env.REACT_APP_API_URL }),
-  cache: new InMemoryCache(),
   headers: {
-        x-hasura-admin-secret: BWePfsaTdHGBgcU
-    }
+        'x-hasura-admin-secret': BWePfsaTdHGBgcU
+    },
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
