@@ -12,7 +12,8 @@ import registerServiceWorker from './registerServiceWorker';
 const client = new ApolloClient({
   link: new HttpLink({ uri: process.env.REACT_APP_API_URL }),
   headers: {
-        'x-hasura-admin-secret': BWePfsaTdHGBgcU
+        'content-type': 'application/json',
+        'x-hasura-admin-secret': 'BWePfsaTdHGBgcU'
     },
   cache: new InMemoryCache(),
 });
