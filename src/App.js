@@ -21,11 +21,11 @@ class App extends Component {
         <section>
           {this.props.data.posts &&
             this.props.data.posts.map(post => (
-              <article key={post.id}>
+              <article key={post.project_title}>
                 <header>
-                  <h2>{post.title}</h2>
+                  <h2>{post.project_links}</h2>
                 </header>
-                <p>{post.description}</p>
+                <p>{post.project_icons}</p>
               </article>
             ))}
         </section>
