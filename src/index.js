@@ -19,7 +19,7 @@ const authLink = new ApolloLink((operation, forward) => {
   // Use the setContext method to set the HTTP headers.
   operation.setContext({
     headers: {
-      "X-Hasura-Admin-Secret": process.env.HEADER_HASURA
+      "X-Hasura-Admin-Secret": "BWePfsaTdHGBgcU"
     }
   });
 
