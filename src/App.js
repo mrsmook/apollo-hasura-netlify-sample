@@ -19,13 +19,13 @@ class App extends Component {
         </p>
         <p>CURRENT ENVIRONMENT: {process.env.REACT_APP_ENV}</p>
         <section>
-          {this.props.data.posts &&
-            this.props.data.posts.map(post => (
-              <article key={post.project_title}>
+          {this.props.data.cockpit_projects &&
+            this.props.data.cockpit_projects.map(cockpit_project => (
+              <article key={cockpit_project.project_title}>
                 <header>
-                  <h2>{post.project_links}</h2>
+                  <h2>{cockpit_project.project_links}</h2>
                 </header>
-                <p>{post.project_icons}</p>
+                <p>{cockpit_project.project_icons}</p>
               </article>
             ))}
         </section>
